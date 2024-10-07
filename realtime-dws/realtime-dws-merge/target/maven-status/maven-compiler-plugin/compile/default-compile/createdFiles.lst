@@ -1,0 +1,4 @@
+com\moonpac\realtime\dws\function\LocalKeyByFlatMapFunction.class
+com\moonpac\realtime\dws\function\MergeAutoKeyedBroadcastProcessFunction.class
+com\moonpac\realtime\dws\app\DwsMergeAPP.class
+com\moonpac\realtime\dws\function\MergeAutoBroadcastProcessFunction.class

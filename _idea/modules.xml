@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/realtime-common/realtime-common.iml" filepath="$PROJECT_DIR$/realtime-common/realtime-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-dim/realtime-dim.iml" filepath="$PROJECT_DIR$/realtime-dim/realtime-dim.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-dim/realtime-dim-base-vm-host-datastore/realtime-dim-base-vm-host-datastore.iml" filepath="$PROJECT_DIR$/realtime-dim/realtime-dim-base-vm-host-datastore/realtime-dim-base-vm-host-datastore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-dim/realtime-dim-vm-life-cycle/realtime-dim-vm-life-cycle.iml" filepath="$PROJECT_DIR$/realtime-dim/realtime-dim-vm-life-cycle/realtime-dim-vm-life-cycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-dwd/realtime-dwd.iml" filepath="$PROJECT_DIR$/realtime-dwd/realtime-dwd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-widen/realtime-dwd-base-widen.iml" filepath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-widen/realtime-dwd-base-widen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-dwd/realtime-dwd-sqlserver-event-data/realtime-dwd-sqlserver-event-data.iml" filepath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-sqlserver-event-data/realtime-dwd-sqlserver-event-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-dwd/realtime-dwd-sqlserver-sessions/realtime-dwd-sqlserver-sessions.iml" filepath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-sqlserver-sessions/realtime-dwd-sqlserver-sessions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-dwd/realtime-dwd-sqlserver-vdi-latest-status/realtime-dwd-sqlserver-vdi-latest-status.iml" filepath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-sqlserver-vdi-latest-status/realtime-dwd-sqlserver-vdi-latest-status.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-dws/realtime-dws.iml" filepath="$PROJECT_DIR$/realtime-dws/realtime-dws.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-dws/realtime-dws-algorithm/realtime-dws-algorithm.iml" filepath="$PROJECT_DIR$/realtime-dws/realtime-dws-algorithm/realtime-dws-algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-dws/realtime-dws-merge/realtime-dws-merge.iml" filepath="$PROJECT_DIR$/realtime-dws/realtime-dws-merge/realtime-dws-merge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-features/realtime-feature-auto-telegraf-config-gen/realtime-feature-auto-telegraf-config-gen.iml" filepath="$PROJECT_DIR$/realtime-features/realtime-feature-auto-telegraf-config-gen/realtime-feature-auto-telegraf-config-gen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-features/realtime-feature-metric-engine/realtime-feature-metric-engine.iml" filepath="$PROJECT_DIR$/realtime-features/realtime-feature-metric-engine/realtime-feature-metric-engine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-features/realtime-features.iml" filepath="$PROJECT_DIR$/realtime-features/realtime-features.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/realtime-parent.iml" filepath="$PROJECT_DIR$/.idea/realtime-parent.iml" />
+    </modules>
+  </component>
+</project>

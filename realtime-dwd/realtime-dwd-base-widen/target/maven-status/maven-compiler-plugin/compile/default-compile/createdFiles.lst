@@ -1,0 +1,4 @@
+com\moonpac\realtime\dwd\source\DorisDimSource.class
+com\moonpac\realtime\dwd\app\DwdBaseWidenAPP.class
+com\moonpac\realtime\dwd\function\WidenProcessFunction.class
+com\moonpac\realtime\dwd\function\WidenMergeProcessFunction.class

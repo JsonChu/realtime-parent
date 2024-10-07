@@ -1,0 +1,29 @@
+/target/
+target
+metastore_db
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+.DS_Store
+*.iws
+*.iml
+*.ipr
+/flink_engine.log
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/derby.log
+/dependency-reduced-pom.xml

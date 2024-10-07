@@ -1,0 +1,260 @@
+ruleCode: "rule_001"
+ruleStatus: "1"
+objectAGGCompute:
+  - objectType: "host"
+    mergeOgnlExpression: "vsphere_host_cpu,vsphere_host_datastore,vsphere_host_disk,vsphere_host_mem,vsphere_host_net"
+    groupKey:
+      - eventNameExpression: "'vsphere_host_cpu'.equals(eventName)"
+        groupExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')"
+        uniqueKeyExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')+'_'+eventName+'_'+eventTimestamp+'_'+eventTags.get('cpu')"
+      - eventNameExpression: "'vsphere_host_datastore'.equals(eventName)"
+        groupExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')"
+        uniqueKeyExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')+'_'+eventName+'_'+eventTimestamp+'_'+eventTags.get('dsname')"
+      - eventNameExpression: "'vsphere_host_disk'.equals(eventName)"
+        groupExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')"
+        uniqueKeyExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')+'_'+eventName+'_'+eventTimestamp+'_'+eventTags.get('disk')"
+      - eventNameExpression: "'vsphere_host_mem'.equals(eventName)"
+        groupExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')"
+        uniqueKeyExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')+'_'+eventName+'_'+eventTimestamp+'_'+eventTags.get('instance')"
+      - eventNameExpression: "'vsphere_host_net'.equals(eventName)"
+        groupExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')"
+        uniqueKeyExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')+'_'+eventName+'_'+eventTimestamp+'_'+eventTags.get('interface')"
+    combinationFields:
+      - filterExpression: " 'vsphere_host_cpu'.equals(eventName) && 'instance-total'.equals(eventTags.get('cpu')) "
+        atomsFields:
+          - fieldName: "hostcpuusage"
+            getFieldExpression: "eventFields.getOrDefault('usage_average','0')"
+          - fieldName: "hostcpuusagemhz"
+            getFieldExpression: "eventFields.getOrDefault('usagemhz_average','0')"
+          - fieldName: "region"
+            isCoreField: true
+            getFieldExpression: "vcenterRegion"
+          - fieldName: "vcenter"
+            isCoreField: true
+            getFieldExpression: "eventTags.get('vcenter')"
+          - fieldName: "eventdate"
+            isCoreField: true
+            getFieldExpression: "eventTimestamp"
+          - fieldName: "hostmoid"
+            isCoreField: true
+            getFieldExpression: "eventTags.get('moid')"
+          - fieldName: "hostname"
+            isCoreField: true
+            getFieldExpression: "eventTags.get('esxhostname')"
+      - filterExpression: " 'vsphere_host_mem'.equals(eventName) && !'DRAM'.equals(eventTags.get('instance')) "
+        atomsFields:
+          - fieldName: "hostmemusage"
+            getFieldExpression: "eventFields.getOrDefault('usage_average','0')"
+          - fieldName: "hostmemactive"
+            getFieldExpression: "eventFields.getOrDefault('active_average','0')"
+      - filterExpression: " 'vsphere_host_disk'.equals(eventName) && 'instance-total'.equals(eventTags.get('disk')) "
+        atomsFields:
+          - fieldName: "hostdiskread"
+            getFieldExpression: "eventFields.getOrDefault('read_average','0')"
+          - fieldName: "hostdiskwrite"
+            getFieldExpression: "eventFields.getOrDefault('write_average','0')"
+      - filterExpression: " 'vsphere_host_net'.equals(eventName) && 'instance-total'.equals(eventTags.get('interface')) "
+        atomsFields:
+          - fieldName: "hostnetbytesrx"
+            getFieldExpression: "eventFields.getOrDefault('bytesRx_average','0')"
+          - fieldName: "hostnetbytestx"
+            getFieldExpression: "eventFields.getOrDefault('bytesTx_average','0')"
+      - filterExpression: " 'vsphere_host_mem'.equals(eventName) "
+        atomsFields:
+          - fieldName: "ip"
+            getFieldExpression: "vcenterInfo.hostInfo.hostName"
+          - fieldName: "hostcpucoretotal"
+            getFieldExpression: "vcenterInfo.hostInfo.csCpuCoreCount"
+          - fieldName: "memorysizegb"
+            isCoreField: true
+            getFieldExpression: "vcenterInfo.hostInfo.csMemorySizemb"
+    aggFieldCompute:
+      - filterExpression: "'vsphere_host_datastore'.equals(eventName) && !'instance-total'.equals(eventTags.get('dsname')) "
+        aggType: "sum"
+        atomsFields:
+          - fieldName: "hostdsnumberread"
+            getFieldExpression: "eventFields.getOrDefault('numberReadAveraged_average','0')"
+          - fieldName: "hostdsnumberwrite"
+            getFieldExpression: "eventFields.getOrDefault('numberWriteAveraged_average','0')"
+
+  - objectType: "vm"
+    mergeOgnlExpression: "vsphere_vm_cpu,vsphere_vm_datastore,vsphere_vm_disk,vsphere_vm_mem,vsphere_vm_net,vsphere_vm_sys"
+    groupKey:
+      - eventNameExpression: "'vsphere_vm_cpu'.equals(eventName)"
+        groupExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')"
+        uniqueKeyExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')+'_'+eventName+'_'+eventTimestamp+'_'+eventTags.get('cpu')"
+      - eventNameExpression: "'vsphere_vm_datastore'.equals(eventName)"
+        groupExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')"
+        uniqueKeyExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')+'_'+eventName+'_'+eventTimestamp+'_'+eventTags.get('dsname')"
+      - eventNameExpression: "'vsphere_vm_disk'.equals(eventName)"
+        groupExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')"
+        uniqueKeyExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')+'_'+eventName+'_'+eventTimestamp+'_'+eventTags.get('disk')"
+      - eventNameExpression: "'vsphere_vm_mem'.equals(eventName)"
+        groupExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')"
+        uniqueKeyExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')+'_'+eventName+'_'+eventTimestamp"
+      - eventNameExpression: "'vsphere_vm_net'.equals(eventName)"
+        groupExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')"
+        uniqueKeyExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')+'_'+eventName+'_'+eventTimestamp+'_'+eventTags.get('interface')"
+      - eventNameExpression: "'vsphere_vm_sys'.equals(eventName)"
+        groupExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')"
+        uniqueKeyExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')+'_'+eventName+'_'+eventTimestamp"
+    combinationFields:
+      - filterExpression: " 'vsphere_vm_mem'.equals(eventName) "
+        atomsFields:
+          - fieldName: "region"
+            isCoreField: true
+            getFieldExpression: "vcenterRegion"
+          - fieldName: "vcenter"
+            isCoreField: true
+            getFieldExpression: "eventTags.get('vcenter')"
+          - fieldName: "eventdate"
+            isCoreField: true
+            getFieldExpression: "eventTimestamp"
+          - fieldName: "vmmoid"
+            isCoreField: true
+            getFieldExpression: "eventTags.get('moid')"
+          - fieldName: "vmname"
+            isCoreField: true
+            getFieldExpression: "eventTags.get('vmname')"
+          - fieldName: "vmmemusage"
+            getFieldExpression: "eventFields.getOrDefault('usage_average','0')"
+          - fieldName: "vmmemactive"
+            getFieldExpression: "eventFields.getOrDefault('active_average','0')"
+          - fieldName: "uptimeseconds"
+            getFieldExpression: "getUptimeSeconds()"
+          - fieldName: "ip"
+            getFieldExpression: "vcenterInfo.vmInfo.pythonGuestIpAddress"
+          - fieldName: "isvdi"
+            getFieldExpression: "vcenterInfo.vmInfo.httpIsVdi"
+          - fieldName: "vmcdriveutilization"
+            getFieldExpression: "vcenterInfo.vmInfo.pythonVmcdriveutilization"
+          - fieldName: "vmcpucoretotal"
+            getFieldExpression: "vcenterInfo.vmInfo.httpNumCpu"
+          - fieldName: "vmmemorysizemb"
+            getFieldExpression: "vcenterInfo.vmInfo.httpMemorySizeMb"
+          - fieldName: "vmpowerstate"
+            getFieldExpression: "vcenterInfo.vmInfo.pythonPowerState"
+          - fieldName: "vmtotalcapacityb"
+            getFieldExpression: "vcenterInfo.vmInfo.pythonTotalCapacityB"
+      - filterExpression: " 'vsphere_vm_cpu'.equals(eventName) && 'instance-total'.equals(eventTags.get('cpu')) "
+        atomsFields:
+          - fieldName: "vmcpuusage"
+            getFieldExpression: "eventFields.getOrDefault('usage_average','0')"
+          - fieldName: "vmcpuusagemhz"
+            getFieldExpression: "eventFields.getOrDefault('usagemhz_average','0')"
+      - filterExpression: " 'vsphere_vm_disk'.equals(eventName) && 'instance-total'.equals(eventTags.get('disk')) "
+        atomsFields:
+          - fieldName: "vmdiskread"
+            getFieldExpression: "eventFields.getOrDefault('read_average','0')"
+          - fieldName: "vmdiskwrite"
+            getFieldExpression: "eventFields.getOrDefault('write_average','0')"
+          - fieldName: "vmdiskusage"
+            getFieldExpression: "doubleValue(eventFields.getOrDefault('read_average','0'))+doubleValue(eventFields.getOrDefault('write_average','0'))"
+      - filterExpression: " 'vsphere_vm_net'.equals(eventName) && 'instance-total'.equals(eventTags.get('interface')) "
+        atomsFields:
+          - fieldName: "vmnetbytesrx"
+            getFieldExpression: "eventFields.getOrDefault('bytesRx_average','0')"
+          - fieldName: "vmnetbytestx"
+            getFieldExpression: "eventFields.getOrDefault('bytesTx_average','0')"
+    aggFieldCompute:
+      - filterExpression: "'vsphere_vm_datastore'.equals(eventName) && !'instance-total'.equals(eventTags.get('dsname')) "
+        aggType: "sum"
+        atomsFields:
+          - fieldName: "vmdsnumberread"
+            getFieldExpression: "eventFields.getOrDefault('numberReadAveraged_average','0')"
+          - fieldName: "vmdsnumberwrite"
+            getFieldExpression: "eventFields.getOrDefault('numberWriteAveraged_average','0')"
+
+  - objectType: "vcenter"
+    mergeOgnlExpression: "vsphere_vm_mem"
+    groupKey:
+      - eventNameExpression: "'vsphere_vm_mem'.equals(eventName)"
+        groupExpression: "eventTags.get('vcenter')"
+        uniqueKeyExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')+eventTimestamp"
+    combinationFields:
+      - filterExpression: " 'vsphere_vm_mem'.equals(eventName) "
+        atomsFields:
+          - fieldName: "region"
+            isCoreField: true
+            getFieldExpression: "vcenterRegion"
+          - fieldName: "vcenter"
+            isCoreField: true
+            getFieldExpression: "eventTags.get('vcenter')"
+          - fieldName: "eventdate"
+            isCoreField: true
+            getFieldExpression: "eventTimestamp"
+          - fieldName: "vcmoid"
+            isCoreField: true
+            getFieldExpression: "eventTags.get('vcenter')"
+    aggFieldCompute:
+      - filterExpression: " 'vsphere_vm_mem'.equals(eventName) "
+        aggType: "sum"
+        atomsFields:
+          - fieldName: "bootedvmnum"
+            getFieldExpression: " 'POWERED_ON'.equals(vcenterInfo.vmInfo.pythonPowerState) ? 1D : 0D "
+          - fieldName: "shutdownvmnum"
+            getFieldExpression: " 'POWERED_OFF'.equals(vcenterInfo.vmInfo.pythonPowerState) ? 1D : 0D "
+          - fieldName: "totalvmnum"
+            getFieldExpression: " 1D "
+
+  - objectType: "datastore-disk"
+    mergeOgnlExpression: "vsphere_datastore_disk"
+    groupKey:
+      - eventNameExpression: "'vsphere_datastore_disk'.equals(eventName)"
+        groupExpression: "'vsphere_datastore_disk_'+eventTags.get('vcenter')+'_'+eventTags.get('moid')"
+        uniqueKeyExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')+'_'+eventName+'_'+eventTimestamp+'_'+eventTags.get('dsname')"
+    combinationFields:
+      - filterExpression: " 'vsphere_datastore_disk'.equals(eventName) "
+        atomsFields:
+          - fieldName: "region"
+            isCoreField: true
+            getFieldExpression: "vcenterRegion"
+          - fieldName: "vcenter"
+            isCoreField: true
+            getFieldExpression: "eventTags.get('vcenter')"
+          - fieldName: "eventdate"
+            isCoreField: true
+            getFieldExpression: "eventTimestamp"
+          - fieldName: "dsmoid"
+            isCoreField: true
+            getFieldExpression: "eventTags.get('moid')"
+          - fieldName: "dsname"
+            isCoreField: true
+            getFieldExpression: "eventTags.get('dsname')"
+          - fieldName: "dsusedcapacity"
+            getFieldExpression: "eventFields.getOrDefault('used_latest','0')"
+          - fieldName: "dstotalcapacity"
+            getFieldExpression: "eventFields.getOrDefault('capacity_latest','0')"
+          - fieldName: "dsfreecapacity"
+            getFieldExpression: "doubleValue(eventFields.getOrDefault('capacity_latest','0'))-doubleValue(eventFields.getOrDefault('used_latest','0'))"
+          - fieldName: "dsprovisionedcapacity"
+            getFieldExpression: "eventFields.getOrDefault('provisioned_latest','0')"
+
+  - objectType: "datastore-datastore"
+    mergeOgnlExpression: "vsphere_datastore_datastore"
+    groupKey:
+      - eventNameExpression: "'vsphere_datastore_datastore'.equals(eventName)"
+        groupExpression: "'vsphere_datastore_datastore_'+eventTags.get('vcenter')+'_'+eventTags.get('moid')"
+        uniqueKeyExpression: "eventTags.get('vcenter')+'_'+eventTags.get('moid')+'_'+eventName+'_'+eventTimestamp+'_'+eventTags.get('dsname')"
+    combinationFields:
+      - filterExpression: " 'vsphere_datastore_datastore'.equals(eventName) "
+        atomsFields:
+          - fieldName: "region"
+            isCoreField: true
+            getFieldExpression: "vcenterRegion"
+          - fieldName: "vcenter"
+            isCoreField: true
+            getFieldExpression: "eventTags.get('vcenter')"
+          - fieldName: "eventdate"
+            isCoreField: true
+            getFieldExpression: "eventTimestamp"
+          - fieldName: "dsmoid"
+            isCoreField: true
+            getFieldExpression: "eventTags.get('moid')"
+          - fieldName: "dsname"
+            isCoreField: true
+            getFieldExpression: "eventTags.get('dsname')"
+          - fieldName: "dsnumberreadaveraged"
+            getFieldExpression: "eventFields.getOrDefault('numberReadAveraged_average','0')"
+          - fieldName: "dsnumberwriteaeraged"
+            getFieldExpression: "eventFields.getOrDefault('numberWriteAveraged_average','0')"

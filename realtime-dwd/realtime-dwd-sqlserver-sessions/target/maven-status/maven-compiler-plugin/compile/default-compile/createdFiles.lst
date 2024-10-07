@@ -1,0 +1,3 @@
+com\moompac\realtime\dwd\function\DatabaseQueryKeyedProcessFunction.class
+com\moompac\realtime\dwd\app\DwdSqlServerSessionsAPP.class
+com\moompac\realtime\dwd\source\DorisDatabaseSource.class

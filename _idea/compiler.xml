@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="realtime-dws-algorithm" />
+        <module name="realtime-common" />
+        <module name="realtime-dwd-sqlserver-sessions" />
+        <module name="realtime-dwd-sqlserver-event-data" />
+        <module name="realtime-dim-vm-life-cycle" />
+        <module name="realtime-dwd-sqlserver-vdi-latest-status" />
+        <module name="realtime-feature-auto-telegraf-config-gen" />
+        <module name="realtime-dim-base-vm-host-datastore" />
+        <module name="realtime-dws-merge" />
+        <module name="realtime-feature-metric-engine" />
+        <module name="realtime-dwd-base-widen" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="realtime-common" target="1.8" />
+      <module name="realtime-dim" target="1.8" />
+      <module name="realtime-dim-base-vm-host-datastore" target="1.8" />
+      <module name="realtime-dim-vm-life-cycle" target="1.8" />
+      <module name="realtime-dwd" target="1.8" />
+      <module name="realtime-dwd-base-widen" target="1.8" />
+      <module name="realtime-dwd-sqlserver-event-data" target="1.8" />
+      <module name="realtime-dwd-sqlserver-sessions" target="1.8" />
+      <module name="realtime-dwd-sqlserver-vdi-latest-status" target="1.8" />
+      <module name="realtime-dws" target="1.8" />
+      <module name="realtime-dws-algorithm" target="1.8" />
+      <module name="realtime-dws-merge" target="1.8" />
+      <module name="realtime-dws-widen-merge" target="1.8" />
+      <module name="realtime-feature-auto-telegraf-config-gen" target="1.8" />
+      <module name="realtime-feature-metric-engine" target="1.8" />
+      <module name="realtime-features" target="1.8" />
+      <module name="realtime-parent" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

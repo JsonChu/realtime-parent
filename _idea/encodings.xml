@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/realtime-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dim/realtime-dim-base-vm-host-datastore/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dim/realtime-dim-base-vm-host-datastore/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dim/realtime-dim-vm-life-cycle/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dim/realtime-dim-vm-life-cycle/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dim/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dim/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-widen/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-widen/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dwd/realtime-dwd-sqlserver-event-data/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dwd/realtime-dwd-sqlserver-event-data/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dwd/realtime-dwd-sqlserver-sessions/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dwd/realtime-dwd-sqlserver-sessions/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dwd/realtime-dwd-sqlserver-vdi-latest-status/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dwd/realtime-dwd-sqlserver-vdi-latest-status/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dwd/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dwd/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dws/realtime-dws-algorithm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dws/realtime-dws-algorithm/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dws/realtime-dws-merge/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dws/realtime-dws-merge/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dws/realtime-dws-widen-merge/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dws/realtime-dws-widen-merge/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dws/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-dws/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-features/realtime-feature-auto-telegraf-config-gen/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-features/realtime-feature-auto-telegraf-config-gen/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-features/realtime-feature-metric-engine/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-features/realtime-feature-metric-engine/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-features/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/realtime-features/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

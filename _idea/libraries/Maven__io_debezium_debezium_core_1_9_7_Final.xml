@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.debezium:debezium-core:1.9.7.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../004_Software/001_JobSoftware/Maven_repo/io/debezium/debezium-core/1.9.7.Final/debezium-core-1.9.7.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../004_Software/001_JobSoftware/Maven_repo/io/debezium/debezium-core/1.9.7.Final/debezium-core-1.9.7.Final-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../004_Software/001_JobSoftware/Maven_repo/io/debezium/debezium-core/1.9.7.Final/debezium-core-1.9.7.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

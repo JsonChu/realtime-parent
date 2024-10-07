@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="854d13a8-3266-414d-9388-38977b9f5fe0" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="release-2.1.2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\004_Software\001_JobSoftware\Maven_repo" />
+        <option name="showDialogWithAdvancedSettings" value="true" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\004_Software\001_JobSoftware\Maven\apache-maven-3.8.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2fBCvF3FtBU3DXcsMIQiH9VYMzb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.moonpac.realtime.dws.app" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.DwsMergeAPPTest">
+    <configuration name="DwdVdiLatestStatusAPP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.moonpac.realtime.dwd.app.DwdVdiLatestStatusAPP" />
+      <module name="realtime-dwd" />
+      <option name="PROGRAM_PARAMETERS" value="--kafka.broker 172.24.100.150:9092,172.24.100.151:9092,172.24.100.152:9092 --doris.username root --doris.password 123456 --doris.url jdbc:mysql://172.24.100.150:9131/vcenter_db?characterEncoding=utf-8&amp;useSSL=false&amp;rewriteBatchedStatements=true --doris.driver com.mysql.cj.jdbc.Driver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.moonpac.realtime.dwd.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DwsMergeAPP (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.moonpac.realtime.dws.app.DwsMergeAPP" />
+      <module name="realtime-dws-merge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.moonpac.realtime.dws.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DwsMergeAPP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.moonpac.realtime.dws.app.DwsMergeAPP" />
+      <module name="realtime-dws-merge" />
+      <option name="PROGRAM_PARAMETERS" value="--kafka.broker 172.24.100.150:9092,172.24.100.151:9092,172.24.100.152:9092" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.moonpac.realtime.dws.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DwsMergeAPPTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.moonpac.realtime.dws.app.DwsMergeAPPTest" />
+      <module name="realtime-dws-merge" />
+      <option name="PROGRAM_PARAMETERS" value="--kafka.broker 172.24.100.150:9092,172.24.100.151:9092,172.24.100.152:9092" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.moonpac.realtime.dws.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.moonpac.realtime.dim.app.hello" />
+      <module name="realtime-dim-base-vm-host-datastore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.moonpac.realtime.dim.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.DwsMergeAPPTest" />
+      <item itemvalue="Application.DwsMergeAPP (1)" />
+      <item itemvalue="Application.DwsMergeAPP" />
+      <item itemvalue="Application.DwdVdiLatestStatusAPP" />
+      <item itemvalue="Application.hello" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DwsMergeAPPTest" />
+        <item itemvalue="Application.DwsMergeAPP" />
+        <item itemvalue="Application.DwsMergeAPP (1)" />
+        <item itemvalue="Application.hello" />
+        <item itemvalue="Application.DwdVdiLatestStatusAPP" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="854d13a8-3266-414d-9388-38977b9f5fe0" name="Changes" comment="" />
+      <created>1713265321710</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713265321710</updated>
+      <workItem from="1713265325400" duration="1465000" />
+      <workItem from="1713337961489" duration="2353000" />
+      <workItem from="1713405104304" duration="599000" />
+      <workItem from="1713754402705" duration="1380000" />
+      <workItem from="1713874738332" duration="1560000" />
+      <workItem from="1713937535318" duration="2185000" />
+      <workItem from="1714359351308" duration="1096000" />
+      <workItem from="1714439779444" duration="1600000" />
+      <workItem from="1715243608767" duration="3193000" />
+      <workItem from="1715910889130" duration="17463000" />
+      <workItem from="1716447124136" duration="6775000" />
+      <workItem from="1716707862599" duration="955000" />
+      <workItem from="1716885251136" duration="368000" />
+      <workItem from="1716887458334" duration="1245000" />
+      <workItem from="1716974113014" duration="114000" />
+      <workItem from="1717376844171" duration="5132000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/realtime-dws/realtime-dws-merge/src/main/java/com/moonpac/realtime/dws/function/MergeAutoKeyedBroadcastProcessFunction.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

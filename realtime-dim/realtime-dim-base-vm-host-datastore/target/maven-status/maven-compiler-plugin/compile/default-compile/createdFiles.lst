@@ -1,0 +1,8 @@
+com\moonpac\realtime\dim\function\VmPythonProcessFunction.class
+com\moonpac\realtime\dim\source\DorisHostPythonSource.class
+com\moonpac\realtime\dim\app\DimBaseAPP.class
+com\moonpac\realtime\dim\source\DorisVcenterConfigParamSource.class
+com\moonpac\realtime\dim\function\HttpVcenterDimProcessFunction.class
+com\moonpac\realtime\dim\app\DimBaseAPP$1.class
+com\moonpac\realtime\dim\function\DimHostMergeProcessFunction.class
+com\moonpac\realtime\dim\function\DimVmMergeProcessFunction.class
